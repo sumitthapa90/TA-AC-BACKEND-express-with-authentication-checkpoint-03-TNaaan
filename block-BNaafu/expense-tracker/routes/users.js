@@ -4,8 +4,12 @@ var User = require("../models/User");
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
-  console.log(req.session);
   res.render("users");
+});
+
+router.get("/dashboard", function (req, res, next) {
+  console.log(req.session);
+  res.render("dashboard");
 });
 
 router.get("/register", (req, res) => {
@@ -42,7 +46,7 @@ router.post("/login", (req, res, next) => {
       }
 
       req.session.userId = user.id;
-      res.redirect("/users");
+      res.redirect("/users/dashboard");
     });
   });
 });
