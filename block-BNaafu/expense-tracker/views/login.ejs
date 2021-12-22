@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Document</title>
   </head>
   <body>
+    <% include partial/header %>
     <h2>Login Form</h2>
 
     <% if(error){%>
@@ -19,5 +21,6 @@
         <input type="submit" value="submit" />
       </form>
     </div>
+    <% include partial/footer %>
   </body>
 </html>

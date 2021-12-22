@@ -15,7 +15,7 @@ router.get(
   "/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/login" }),
   function (req, res) {
-    res.redirect("/users");
+    res.redirect("/users/dashboard");
   }
 );
 
@@ -30,7 +30,7 @@ router.get(
   "/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
-    res.redirect("/users");
+    res.redirect("/users/dashboard");
   }
 );
 
